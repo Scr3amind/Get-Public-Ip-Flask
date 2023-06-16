@@ -6,4 +6,4 @@ app = Flask(__name__)
 def get_ip():
     ip = request.headers.get('X-Forwarded-For', request.remote_addr)
     ip = ip.split(',')[0].strip()
-    return jsonify({'ip': ip.split}), 200
+    return jsonify({'ip': ip}), 200
